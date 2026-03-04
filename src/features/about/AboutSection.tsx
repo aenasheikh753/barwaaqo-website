@@ -2,19 +2,33 @@ import React from 'react';
 import SectionHeader from '../../components/common/SectionHeader';
 
 const AboutSection: React.FC = () => (
-    <section id="about" className="section-padding bg-white">
-        <div className="container-custom">
+    <section id="about" className="section-padding bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
+            backgroundImage: 'url(/assets/images/plants-decoration.svg)',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'repeat-x',
+            backgroundPosition: 'bottom',
+            backgroundAttachment: 'scroll'
+        }} />
+        <div className="container-custom relative z-10">
             <div className="grid lg:grid-cols-2 gap-14 items-center">
                 {/* Left: Visual */}
                 <div className="relative flex justify-center">
                     <div className="relative w-full max-w-lg">
-                        {/* Main image placeholder */}
-                        <div className="relative rounded-3xl overflow-hidden shadow-card-hover bg-primary aspect-[4/3] flex items-center justify-center">
-                            <div className="absolute inset-0 bg-dark-gradient opacity-80" />
+                        {/* Main image as background */}
+                        <div 
+                            className="relative rounded-3xl overflow-hidden shadow-card-hover bg-primary aspect-[4/3] flex items-center justify-center"
+                            style={{
+                                backgroundImage: 'url(/assets/images/field.jpg)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center'
+                            }}
+                        >
+                            <div className="absolute inset-0 bg-dark-gradient opacity-50" />
                             <div className="relative z-10 text-center p-10">
                                 <div className="text-7xl mb-4">🌾</div>
                                 <p className="font-heading text-white text-2xl font-bold">Barwaaqo Agri Group</p>
-                                <p className="text-cta text-sm font-body mt-1">Mogadishu · Nairobi</p>
+                                <p className="text-white text-sm font-body mt-1">Mogadishu · Nairobi</p>
                             </div>
                         </div>
                         {/* Decorative border box */}

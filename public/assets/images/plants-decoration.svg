@@ -1,0 +1,104 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <style>
+      .plant-leaf { animation: sway 4s ease-in-out infinite; }
+      @keyframes sway { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(2px); } }
+    </style>
+  </defs>
+  
+  <!-- Plant decorations at bottom -->
+  <g opacity="0.25" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Plant stem 1 -->
+    <path d="M 20 550 Q 15 500 20 450 Q 22 400 30 350" class="plant-leaf" stroke-width="2"/>
+    <!-- Leaves -->
+    <path d="M 20 500 L 5 485" />
+    <path d="M 20 500 L 35 485" />
+    <path d="M 22 450 L 8 440" />
+    <path d="M 22 450 L 36 440" />
+    <path d="M 25 400 L 12 390" />
+    <path d="M 25 400 L 38 390" />
+    
+    <!-- Plant stem 2 -->
+    <path d="M 120 560 Q 115 500 125 440 Q 135 380 150 320" class="plant-leaf" stroke-width="2"/>
+    <path d="M 125 500 L 110 485" />
+    <path d="M 125 500 L 140 485" />
+    <path d="M 132 450 L 118 440" />
+    <path d="M 132 450 L 146 440" />
+    <path d="M 142 390 L 128 380" />
+    <path d="M 142 390 L 156 380" />
+    
+    <!-- Plant stem 3 - Tall -->
+    <path d="M 250 570 Q 245 490 260 410 Q 275 320 290 230" class="plant-leaf" stroke-width="2.5"/>
+    <path d="M 260 520 L 245 505" />
+    <path d="M 260 520 L 275 505" />
+    <path d="M 268 460 L 253 450" />
+    <path d="M 268 460 L 283 450" />
+    <path d="M 280 380 L 265 370" />
+    <path d="M 280 380 L 295 370" />
+    <path d="M 288 290 L 273 280" />
+    <path d="M 288 290 L 303 280" />
+    
+    <!-- Plant stem 4 -->
+    <path d="M 350 560 Q 345 500 355 440 Q 370 370 390 300" class="plant-leaf" stroke-width="2"/>
+    <path d="M 355 510 L 340 495" />
+    <path d="M 355 510 L 370 495" />
+    <path d="M 365 450 L 350 440" />
+    <path d="M 365 450 L 380 440" />
+    <path d="M 375 380 L 360 370" />
+    <path d="M 375 380 L 390 370" />
+    
+    <!-- Plant stem 5 - Bushy -->
+    <path d="M 450 565 Q 440 490 455 420 Q 470 340 490 260" class="plant-leaf" stroke-width="2"/>
+    <path d="M 455 510 L 440 495" />
+    <path d="M 455 510 L 470 495" />
+    <path d="M 468 450 L 453 440" />
+    <path d="M 468 450 L 483 440" />
+    <path d="M 480 380 L 465 370" />
+    <path d="M 480 380 L 495 370" />
+    <path d="M 488 290 L 473 280" />
+    <path d="M 488 290 L 503 280" />
+    
+    <!-- Plant stem 6 -->
+    <path d="M 550 560 Q 540 495 560 425 Q 580 340 600 250" class="plant-leaf" stroke-width="2"/>
+    <path d="M 560 510 L 545 495" />
+    <path d="M 560 510 L 575 495" />
+    <path d="M 573 450 L 558 440" />
+    <path d="M 573 450 L 588 440" />
+    <path d="M 590 370 L 575 360" />
+    <path d="M 590 370 L 605 360" />
+    
+    <!-- Plant stem 7 -->
+    <path d="M 650 568 Q 640 500 660 430 Q 680 350 700 270" class="plant-leaf" stroke-width="2"/>
+    <path d="M 660 520 L 645 505" />
+    <path d="M 660 520 L 675 505" />
+    <path d="M 675 460 L 660 450" />
+    <path d="M 675 460 L 690 450" />
+    <path d="M 690 380 L 675 370" />
+    <path d="M 690 380 L 705 370" />
+    
+    <!-- Plant stem 8 -->
+    <path d="M 750 560 Q 740 490 760 420 Q 780 340 800 260" class="plant-leaf" stroke-width="2"/>
+    <path d="M 760 510 L 745 495" />
+    <path d="M 760 510 L 775 495" />
+    <path d="M 773 450 L 758 440" />
+    <path d="M 773 450 L 788 440" />
+    <path d="M 790 370 L 775 360" />
+    <path d="M 790 370 L 805 360" />
+    
+    <!-- Plant stem 9 -->
+    <path d="M 850 565 Q 840 495 860 425 Q 880 340 900 250" class="plant-leaf" stroke-width="2"/>
+    <path d="M 860 520 L 845 505" />
+    <path d="M 860 520 L 875 505" />
+    <path d="M 875 460 L 860 450" />
+    <path d="M 875 460 L 890 450" />
+    <path d="M 890 380 L 875 370" />
+    <path d="M 890 380 L 905 370" />
+    
+    <!-- Plant stem 10 - Right side -->
+    <path d="M 950 560 Q 940 500 960 440 Q 980 370 1000 290" class="plant-leaf" stroke-width="2"/>
+    <path d="M 960 510 L 945 495" />
+    <path d="M 960 510 L 975 495" />
+    <path d="M 975 450 L 960 440" />
+    <path d="M 975 450 L 990 440" />
+  </g>
+</svg>

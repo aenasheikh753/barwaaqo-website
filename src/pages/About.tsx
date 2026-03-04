@@ -11,9 +11,23 @@ const About: React.FC = () => {
             />
 
             {/* Mission & Vision Section */}
-            <section className="section-padding bg-white">
-                <div className="container-custom">
+            <section className="section-padding bg-white relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
+                    backgroundImage: 'url(/assets/images/plants-decoration.svg)',
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'repeat-x',
+                    backgroundPosition: 'bottom right'
+                }} />
+                <div className="container-custom relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div className="relative rounded-2xl overflow-hidden shadow-lg h-96 flex-shrink-0">
+                            <img 
+                                src="/assets/images/field.jpg" 
+                                alt="Agricultural field" 
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-60" />
+                        </div>
                         <div>
                             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Our Vision & Mission</h2>
                             <div className="space-y-6 text-neutral-body leading-relaxed">
@@ -28,6 +42,14 @@ const About: React.FC = () => {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Choose Section with Image */}
+            <section className="section-padding bg-base">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="bg-gradient-to-br from-primary/5 to-cta/5 rounded-3xl p-10 border border-cta/10 shadow-lg">
                             <h3 className="text-2xl font-heading font-bold text-primary mb-8">Why Choose Barwaaqo?</h3>
                             <ul className="space-y-4">
@@ -45,13 +67,27 @@ const About: React.FC = () => {
                                 ))}
                             </ul>
                         </div>
+                        <div className="relative rounded-2xl overflow-hidden shadow-lg h-96 flex-shrink-0">
+                            <img 
+                                src="/assets/images/consulting.jpg" 
+                                alt="Consulting services" 
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-60" />
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Core Pillars Section */}
-            <section className="section-padding bg-base">
-                <div className="container-custom">
+            <section className="section-padding bg-white relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
+                    backgroundImage: 'url(/assets/images/plants-decoration.svg)',
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'repeat-x',
+                    backgroundPosition: 'bottom left'
+                }} />
+                <div className="container-custom relative z-10">
                     <div className="flex flex-col items-center gap-12">
                         <SectionHeader
                             tag="Our Foundation"
@@ -61,19 +97,53 @@ const About: React.FC = () => {
                         />
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
                             {[
-                                { num: '01', icon: '🔬', title: 'Science-Based', desc: 'Data-driven decisions powered by agronomic research and field expertise.' },
-                                { num: '02', icon: '🌱', title: 'Sustainability', desc: 'Environmentally responsible practices for long-term farm profitability.' },
-                                { num: '03', icon: '🤝', title: 'Partnership', desc: 'Collaborative approaches that empower farmers and community stakeholders.' },
-                                { num: '04', icon: '📊', title: 'Accountability', desc: 'Transparent results and measurable outcomes in every project.' }
+                                { 
+                                    num: '01', 
+                                    icon: '🔬', 
+                                    title: 'Science-Based', 
+                                    desc: 'Data-driven decisions powered by agronomic research and field expertise.',
+                                    image: '/assets/images/soil.jpg'
+                                },
+                                { 
+                                    num: '02', 
+                                    icon: '🌱', 
+                                    title: 'Sustainability', 
+                                    desc: 'Environmentally responsible practices for long-term farm profitability.',
+                                    image: '/assets/images/field.jpg'
+                                },
+                                { 
+                                    num: '03', 
+                                    icon: '🤝', 
+                                    title: 'Partnership', 
+                                    desc: 'Collaborative approaches that empower farmers and community stakeholders.',
+                                    image: '/assets/images/irrigation.jpg'
+                                },
+                                { 
+                                    num: '04', 
+                                    icon: '📊', 
+                                    title: 'Accountability', 
+                                    desc: 'Transparent results and measurable outcomes in every project.',
+                                    image: '/assets/images/seeds.jpg'
+                                }
                             ].map((pillar) => (
-                                <div key={pillar.num} className="card-base p-7 flex flex-col gap-4 h-full hover:shadow-lg transition-all">
-                                    <div className="flex items-start justify-between">
-                                        <span className="text-3xl">{pillar.icon}</span>
-                                        <span className="text-cta font-heading font-bold text-sm">{pillar.num}</span>
+                                <div key={pillar.num} className="card-base overflow-hidden flex flex-col h-full hover:shadow-lg transition-all">
+                                    <div className="h-40 overflow-hidden relative">
+                                        <img 
+                                            src={pillar.image} 
+                                            alt={pillar.title}
+                                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
                                     </div>
-                                    <div>
-                                        <h3 className="font-heading text-lg font-bold text-primary mb-2">{pillar.title}</h3>
-                                        <p className="text-neutral-body text-sm font-body leading-relaxed">{pillar.desc}</p>
+                                    <div className="p-5 flex flex-col gap-3 flex-grow">
+                                        <div className="flex items-start justify-between">
+                                            <span className="text-2xl">{pillar.icon}</span>
+                                            <span className="text-cta font-heading font-bold text-sm">{pillar.num}</span>
+                                        </div>
+                                        <div>
+                                            <h3 className="font-heading text-lg font-bold text-primary mb-2">{pillar.title}</h3>
+                                            <p className="text-neutral-body text-sm font-body leading-relaxed">{pillar.desc}</p>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -83,7 +153,7 @@ const About: React.FC = () => {
             </section>
 
             {/* Our Expertise Section */}
-            <section className="section-padding bg-white">
+            <section className="section-padding bg-base">
                 <div className="container-custom">
                     <div className="flex flex-col items-center gap-12">
                         <SectionHeader
@@ -94,23 +164,57 @@ const About: React.FC = () => {
                         />
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                             {[
-                                { title: 'Soil & Crop Science', items: ['Soil health analysis', 'Crop nutrition', 'Pest management', 'Rotation planning'] },
-                                { title: 'Water Management', items: ['Irrigation design', 'Drip systems', 'Water harvesting', 'Efficiency optimization'] },
-                                { title: 'Seed Systems', items: ['Certified varieties', 'Quality testing', 'Storage solutions', 'Farmer training'] },
-                                { title: 'Farm Economics', items: ['Cost analysis', 'Yield projection', 'Investment ROI', 'Market linkage'] },
-                                { title: 'Project Management', items: ['Site planning', 'Implementation', 'Monitoring & eval', 'Reporting'] },
-                                { title: 'Capacity Building', items: ['Farmer training', 'Skills workshops', 'Youth programs', 'Women empowerment'] }
+                                { 
+                                    title: 'Soil & Crop Science', 
+                                    items: ['Soil health analysis', 'Crop nutrition', 'Pest management', 'Rotation planning'],
+                                    image: '/assets/images/soil.jpg'
+                                },
+                                { 
+                                    title: 'Water Management', 
+                                    items: ['Irrigation design', 'Drip systems', 'Water harvesting', 'Efficiency optimization'],
+                                    image: '/assets/images/irrigation.jpg'
+                                },
+                                { 
+                                    title: 'Seed Systems', 
+                                    items: ['Certified varieties', 'Quality testing', 'Storage solutions', 'Farmer training'],
+                                    image: '/assets/images/seeds.jpg'
+                                },
+                                { 
+                                    title: 'Farm Economics', 
+                                    items: ['Cost analysis', 'Yield projection', 'Investment ROI', 'Market linkage'],
+                                    image: '/assets/images/field.jpg'
+                                },
+                                { 
+                                    title: 'Project Management', 
+                                    items: ['Site planning', 'Implementation', 'Monitoring & eval', 'Reporting'],
+                                    image: '/assets/images/consulting.jpg'
+                                },
+                                { 
+                                    title: 'Capacity Building', 
+                                    items: ['Farmer training', 'Skills workshops', 'Youth programs', 'Women empowerment'],
+                                    image: '/assets/images/field.jpg'
+                                }
                             ].map((expertise) => (
-                                <div key={expertise.title} className="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl p-6 border border-neutral-border hover:border-cta/50 transition-all">
-                                    <h3 className="font-heading text-lg font-bold text-primary mb-4">{expertise.title}</h3>
-                                    <ul className="space-y-2">
-                                        {expertise.items.map((item) => (
-                                            <li key={item} className="flex items-center gap-2 text-sm text-neutral-body font-body">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-cta" />
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                <div key={expertise.title} className="bg-white rounded-2xl overflow-hidden border border-neutral-border hover:border-cta/50 transition-all hover:shadow-lg">
+                                    <div className="h-32 overflow-hidden relative">
+                                        <img 
+                                            src={expertise.image} 
+                                            alt={expertise.title}
+                                            className="w-full h-full object-cover"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                                    </div>
+                                    <div className="p-6">
+                                        <h3 className="font-heading text-lg font-bold text-primary mb-4">{expertise.title}</h3>
+                                        <ul className="space-y-2">
+                                            {expertise.items.map((item) => (
+                                                <li key={item} className="flex items-center gap-2 text-sm text-neutral-body font-body">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-cta" />
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -180,8 +284,14 @@ const About: React.FC = () => {
             </section>
 
             {/* Timeline Section */}
-            <section className="section-padding bg-white">
-                <div className="container-custom">
+            <section className="section-padding bg-white relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
+                    backgroundImage: 'url(/assets/images/plants-decoration.svg)',
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'repeat-x',
+                    backgroundPosition: 'bottom right'
+                }} />
+                <div className="container-custom relative z-10">
                     <div className="flex flex-col items-center gap-12">
                         <SectionHeader
                             tag="Our Journey"
