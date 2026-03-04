@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SectionHeader from '../../common/SectionHeader';
+import SectionHeader from '../../components/common/SectionHeader';
 
-import { SERVICES_DATA } from '../../../data/services.data';
-import type { Service } from '../../../types/service.types';
+import { SERVICES_DATA } from '../../data/services.data';
+import type { Service } from '../../types/service.types';
 
 const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
     <div

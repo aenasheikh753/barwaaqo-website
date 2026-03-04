@@ -1,5 +1,5 @@
 import React from 'react';
-import ConsultationForm from '../components/sections/ConsultationForm';
+import ConsultationForm from '../features/consultation-form';
 
 const Contact: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import PageHero from '../../components/common/PageHero';
 import { Link } from 'react-router-dom';
-import ConsultationForm from '../../components/sections/ConsultationForm';
+import ConsultationForm from '../../features/consultation-form';
 
 const Irrigation: React.FC = () => {
     return (

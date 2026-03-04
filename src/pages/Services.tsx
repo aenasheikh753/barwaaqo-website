@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHero from '../components/common/PageHero';
-import ConsultationForm from '../components/sections/ConsultationForm';
+import ConsultationForm from '../features/consultation-form';
 
 const Services: React.FC = () => {
     const servicesList = [

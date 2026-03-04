@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { COMPANY_INFO } from '../../../constants';
+import { COMPANY_INFO } from '../../constants';
 
 
 const Hero: React.FC = () => {

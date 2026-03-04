@@ -1,0 +1,9 @@
+export { default as Hero } from './hero';
+export { default as TrustBar } from './trust-bar';
+export { default as ServicesOverview } from './services';
+export { default as AboutSection } from './about';
+export { default as ProductsPreview } from './products';
+export { default as HowWeWork } from './how-we-work';
+export { default as FeaturedProject } from './featured-project';
+export { default as Testimonials } from './testimonials';
+export { default as ConsultationForm } from './consultation-form';

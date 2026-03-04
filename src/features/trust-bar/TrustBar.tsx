@@ -1,6 +1,6 @@
 import React from 'react';
-import AnimatedCounter from '../../common/AnimatedCounter';
-import { STATS_DATA } from '../../../data/stats.data';
+import AnimatedCounter from '../../components/common/AnimatedCounter';
+import { STATS_DATA } from '../../data/stats.data';
 
 const TrustBar: React.FC = () => {
     return (

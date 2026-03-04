@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeader from '../../common/SectionHeader';
+import SectionHeader from '../../components/common/SectionHeader';
 
 const STEPS = [
     { number: '01', icon: '🔍', title: 'Assessment', desc: 'In-depth evaluation of farm conditions, soil, water availability, and farmer objectives.' },

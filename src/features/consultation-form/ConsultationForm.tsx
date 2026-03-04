@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SectionHeader from '../../common/SectionHeader';
+import SectionHeader from '../../components/common/SectionHeader';
 
 interface FormData {
   name: string;

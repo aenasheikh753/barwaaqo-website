@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeader from '../../common/SectionHeader';
+import SectionHeader from '../../components/common/SectionHeader';
 
 const AboutSection: React.FC = () => (
     <section id="about" className="section-padding bg-white">

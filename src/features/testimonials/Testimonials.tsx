@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import SectionHeader from '../../common/SectionHeader';
-import { TESTIMONIALS_DATA } from '../../../data/testimonials.data';
+import SectionHeader from '../../components/common/SectionHeader';
+import { TESTIMONIALS_DATA } from '../../data/testimonials.data';
 
 const Testimonials: React.FC = () => {
     const [active, setActive] = useState(0);

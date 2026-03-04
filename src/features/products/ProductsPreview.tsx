@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SectionHeader from '../../common/SectionHeader';
+import SectionHeader from '../../components/common/SectionHeader';
 
-import { PRODUCTS_DATA } from '../../../data/products.data';
-import type { Product } from '../../../types/product.types';
+import { PRODUCTS_DATA } from '../../data/products.data';
+import type { Product } from '../../types/product.types';
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
     <div className="card-base p-7 flex flex-col gap-5 group hover:-translate-y-1 transition-all duration-300">
