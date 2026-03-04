@@ -7,19 +7,27 @@ interface PageHeroProps {
 }
 
 const PageHero: React.FC<PageHeroProps> = ({ title, subtitle, image }) => {
+    // default background photo if none supplied
+    const bgUrl = image || '/assets/images/field.jpg';
+
     return (
-        <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-primary pt-20">
+        <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden pt-20">
             {/* Background Pattern/Overlay */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/80 z-10" />
-                <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
-                {image && (
-                    <img
-                        src={image}
-                        alt={title}
-                        className="w-full h-full object-cover"
-                    />
-                )}
+                {/* underlying photo */}
+                <img
+                    src={bgUrl}
+                    alt={title}
+                    className="w-full h-full object-cover"
+                />
+                
+                {/* ─── YAHAN CHANGES HAIN ─── */}
+                {/* 1. Base Dark Layer: Poori image ko thoda dark karne ke liye */}
+                <div className="absolute inset-0 bg-primary/40 z-10" />
+                
+                {/* 2. Stronger Gradient: Bottom se top tak dark effect dene ke liye */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-primary/40 z-10" />
+                {/* ────────────────────────── */}
             </div>
 
             <div className="container-custom relative z-20 text-center">
@@ -27,7 +35,7 @@ const PageHero: React.FC<PageHeroProps> = ({ title, subtitle, image }) => {
                     {title}
                 </h1>
                 {subtitle && (
-                    <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto animate-fade-in-up delay-100 italic">
+                    <p className="text-lg md:text-xl text-white max-w-2xl mx-auto animate-fade-in-up delay-100 italic">
                         {subtitle}
                     </p>
                 )}

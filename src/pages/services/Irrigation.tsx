@@ -22,8 +22,8 @@ const Irrigation: React.FC = () => {
                     ))}
                 </div>
                 <div className="bg-primary text-white p-12 rounded-[3.5rem] shadow-2xl">
-                    <h3 className="text-2xl font-heading font-bold mb-8">Ready to Optimize Your Water Use?</h3>
-                    <div className="max-w-xl mx-auto block text-left">
+                    <h3 className="text-2xl font-heading font-bold mb-4 text-white">Ready to Optimize Your Water Use?</h3>
+                    <div className="py-0">
                         <ConsultationForm />
                     </div>
                 </div>

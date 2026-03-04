@@ -13,7 +13,8 @@ import ScrollToTop from './components/common/ScrollToTop';
 import {
   Home, About, Services, Products, Projects, Training, Insights, Contact,
   AgriculturalConsulting, SeedsInputs, Irrigation, Greenhouse, SoilCrop, TrainingProjects,
-  VegetableSeeds, CerealsPulses, FodderForage, Horticulture
+  VegetableSeeds, CerealsPulses, FodderForage, Horticulture,
+  ProjectDetail, ArticleDetail
 } from './pages';
 
 const App: React.FC = () => {
@@ -46,8 +47,10 @@ const App: React.FC = () => {
             <Route path="/products/horticulture" element={<Horticulture />} />
 
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/training" element={<Training />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:id" element={<ArticleDetail />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

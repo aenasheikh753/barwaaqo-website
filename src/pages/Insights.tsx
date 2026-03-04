@@ -1,58 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageHero from '../components/common/PageHero';
 import SectionHeader from '../components/common/SectionHeader';
+import { ARTICLES_DATA } from '../data/insights.data';
 
 const Insights: React.FC = () => {
-    const articles = [
-        {
-            id: 1,
-            date: 'Mar 4, 2026',
-            category: 'Research',
-            title: 'Impact of Soil Health on Crop Yields',
-            excerpt: 'New research shows organic matter improvements can increase yields by up to 35% over three seasons.',
-            readTime: '5 min'
-        },
-        {
-            id: 2,
-            date: 'Mar 1, 2026',
-            category: 'Market Trends',
-            title: 'Rising Demand for Certified Seeds',
-            excerpt: 'East African farmers increasingly prefer certified seeds for reliability and higher productivity.',
-            readTime: '4 min'
-        },
-        {
-            id: 3,
-            date: 'Feb 28, 2026',
-            category: 'Innovation',
-            title: 'Drip Irrigation Adoption Growing',
-            excerpt: 'Cost-effective irrigation technology becoming mainstream among smallholder farmers in Somalia.',
-            readTime: '6 min'
-        },
-        {
-            id: 4,
-            date: 'Feb 25, 2026',
-            category: 'Climate',
-            title: 'Climate-Smart Agriculture Strategies',
-            excerpt: 'Implementing resilient farming practices to adapt to changing rainfall patterns in East Africa.',
-            readTime: '7 min'
-        },
-        {
-            id: 5,
-            date: 'Feb 22, 2026',
-            category: 'Policy',
-            title: 'New Agricultural Subsidy Programs',
-            excerpt: 'Government initiatives to support farmers with input financing and technical support.',
-            readTime: '5 min'
-        },
-        {
-            id: 6,
-            date: 'Feb 20, 2026',
-            category: 'Success Story',
-            title: 'Women Farmers Success Network',
-            excerpt: 'Female farmers in Mogadishu region showcase impressive business growth through training programs.',
-            readTime: '8 min'
-        }
-    ];
+    const articles = ARTICLES_DATA;
 
     return (
         <>
@@ -72,7 +25,7 @@ const Insights: React.FC = () => {
                         />
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                             {articles.map((article) => (
-                                <article key={article.id} className="card-base p-6 flex flex-col gap-4 hover:shadow-lg transition-all cursor-pointer">
+                                <Link to={`/insights/${article.id}`} key={article.id} className="card-base p-6 flex flex-col gap-4 hover:shadow-lg transition-all block">
                                     <div className="flex items-center justify-between">
                                         <span className="text-xs font-body font-semibold text-cta uppercase tracking-wider">{article.category}</span>
                                         <span className="text-xs text-neutral-light font-body">{article.readTime}</span>
@@ -85,7 +38,7 @@ const Insights: React.FC = () => {
                                         <span className="text-xs text-neutral-light font-body">{article.date}</span>
                                         <span className="text-cta font-body font-semibold text-sm">Read →</span>
                                     </div>
-                                </article>
+                                </Link>
                             ))}
                         </div>
                     </div>

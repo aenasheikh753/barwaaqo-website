@@ -6,6 +6,8 @@ export { default as Projects } from './Projects';
 export { default as Training } from './Training';
 export { default as Insights } from './Insights';
 export { default as Contact } from './Contact';
+export { default as ProjectDetail } from './projects/ProjectDetail';
+export { default as ArticleDetail } from './insights/ArticleDetail';
 
 // Services Sub-pages
 export { default as AgriculturalConsulting } from './services/Consulting';

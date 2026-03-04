@@ -3,10 +3,10 @@ import PageHero from '../components/common/PageHero';
 
 const Products: React.FC = () => {
     const categories = [
-        { name: 'Vegetable Seeds', desc: 'Hybrid and OPV varieties for commercial production.' },
-        { name: 'Cereals & Pulses', desc: 'High-quality certified seeds for food security.' },
-        { name: 'Fodder & Forage', desc: 'Nutritious livestock feed solutions.' },
-        { name: 'Horticulture Solutions', desc: 'Tools and inputs for premium horticulture.' }
+        { name: 'Vegetable Seeds', desc: 'Hybrid and OPV varieties for commercial production.', image: '/assets/images/seeds.jpg' },
+        { name: 'Cereals & Pulses', desc: 'High-quality certified seeds for food security.', image: '/assets/images/soil.jpg' },
+        { name: 'Fodder & Forage', desc: 'Nutritious livestock feed solutions.', image: '/assets/images/field.jpg' },
+        { name: 'Horticulture Solutions', desc: 'Tools and inputs for premium horticulture.', image: '/assets/images/irrigation.jpg' }
     ];
 
     return (
@@ -21,9 +21,16 @@ const Products: React.FC = () => {
                     {categories.map((cat) => (
                         <div key={cat.name} className="group cursor-pointer">
                             <div className="aspect-[4/5] bg-neutral-light rounded-[2.5rem] mb-6 overflow-hidden relative shadow-card hover:shadow-card-hover transition-all duration-500">
+                                {cat.image && (
+                                    <img
+                                        src={cat.image}
+                                        alt={cat.name}
+                                        className="w-full h-full object-cover"
+                                    />
+                                )}
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="absolute bottom-6 left-6 right-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all">
-                                    <button className="w-full btn-cta py-3 text-sm">Request Catalog</button>
+                                    <button className="w-full btn-cta py-3 text-sm text-white">Request Catalog</button>
                                 </div>
                             </div>
                             <h3 className="text-xl font-heading font-bold text-primary mb-2 group-hover:text-cta transition-colors">

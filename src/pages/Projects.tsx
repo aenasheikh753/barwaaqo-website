@@ -1,38 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageHero from '../components/common/PageHero';
 import SectionHeader from '../components/common/SectionHeader';
 
+import { PROJECTS_DATA } from '../data/projects.data';
+
 const Projects: React.FC = () => {
-    const projects = [
-        {
-            id: 1,
-            tag: 'COMMERCIAL FARM OPTIMIZATION',
-            title: 'Yield Improvement Success',
-            desc: 'Increased yields by 20-30% through precision agriculture techniques.',
-            impact: ['20-30% yield increase', 'Water efficiency gains', 'Reduced production loss']
-        },
-        {
-            id: 2,
-            tag: 'SMALLHOLDER TRANSFORMATION',
-            title: 'Community Farm Success',
-            desc: 'Empowered 150+ smallholder farmers with modern farming practices.',
-            impact: ['Improved food security', 'Enhanced livelihoods', 'Community resilience']
-        },
-        {
-            id: 3,
-            tag: 'IRRIGATION DEVELOPMENT',
-            title: 'Water Management Project',
-            desc: 'Implemented sustainable irrigation systems across 500+ acres.',
-            impact: ['Year-round farming', 'Water savings 40%', 'Crop diversification']
-        },
-        {
-            id: 4,
-            tag: 'SEED SYSTEM SCALING',
-            title: 'Quality Seed Distribution',
-            desc: 'Distributed certified seeds to 8,000+ farmers across East Africa.',
-            impact: ['Higher germination rates', 'Better yields', 'Market access']
-        }
-    ];
+    const projects = PROJECTS_DATA;
 
     return (
         <>
@@ -52,8 +26,18 @@ const Projects: React.FC = () => {
                         />
                         <div className="grid md:grid-cols-2 gap-6 w-full">
                             {projects.map((project) => (
-                                <div key={project.id} className="card-base overflow-hidden hover:shadow-lg transition-all">
-                                    <div className="h-48 bg-gradient-to-br from-primary/10 via-cta/5 to-transparent" />
+                                <Link to={`/projects/${project.id}`} key={project.id} className="card-base overflow-hidden hover:shadow-lg transition-all block">
+                                    {/* featured image at top */}
+                                    {project.image && (
+                                        <div className="relative h-48 w-full">
+                                            <img
+                                                src={project.image}
+                                                alt={project.title}
+                                                className="object-cover w-full h-full"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
+                                        </div>
+                                    )}
                                     <div className="p-7 flex flex-col gap-4">
                                         <div>
                                             <span className="text-cta font-body font-bold text-xs uppercase tracking-wider">{project.tag}</span>
@@ -72,7 +56,7 @@ const Projects: React.FC = () => {
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
